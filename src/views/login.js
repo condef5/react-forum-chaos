@@ -2,20 +2,35 @@
 import React from "react";
 import { jsx } from "@emotion/core";
 import { Link } from "@reach/router";
+import { navigate } from "@reach/router";
+import { create } from "istanbul-reports";
 
-function Login({ onUsername }) {
-  const [content, setContent] = React.useState("");
+function Login({ createUser }) {
+  const [username, setUsername] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const user = JSON.parse(localStorage.getItem("user"));
+  if (user) {
+    navigate("/");
+  }
+
+  function handleChangeUsername(event) {
+    setUsername(event.target.value);
+  }
+  function handleChangeEmail(event) {
+    setEmail(event.target.value);
+  }
 
   function handleSubmit(event) {
     event.preventDefault();
-    onUsername(content);
+
+    const user = { email: email, username: username };
+    createUser(user);
+    navigate("/");
   }
 
-  function handleChange(event) {
-    setContent(event.target.value);
-  }
   return (
     <>
+      <Link to="/">Go to Home</Link>
       <main
         css={{
           background: "gray",
@@ -59,10 +74,38 @@ function Login({ onUsername }) {
               type="text"
               name="username"
               id="username"
-              onChange={handleChange}
+              value={username}
+              onChange={handleChangeUsername}
               autoFocus
             />
           </div>
+
+          <div css={{ margin: "2.5rem 1rem" }}>
+            <input
+              css={{
+                border: "none",
+                borderBottom: "1px solid #ccc",
+                padding: ".5rem 1rem",
+                fontSize: "1.2rem",
+                boxSizing: "border-box",
+                width: "100%",
+                outline: "none",
+                transition: "border-bottom-color 300ms ease",
+                ":focus": {
+                  borderBottomColor: "#2C3A47"
+                }
+              }}
+              aria-label="Enter your email"
+              placeholder="Enter your email"
+              type="email"
+              name="email"
+              id="email"
+              value={email}
+              onChange={handleChangeEmail}
+              autoFocus
+            />
+          </div>
+
           <button
             css={{
               backgroundColor: "#55E6C1",
