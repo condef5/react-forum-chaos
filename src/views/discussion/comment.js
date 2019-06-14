@@ -17,7 +17,7 @@ const info = {
 
 const content = { ...info, fontSize: "1.2em", margin: "5px 0 0 0" };
 
-function Comment({ comments, user, discussionId, handleNewComment }) {
+function Comment({ comments }) {
   return (
     <div css={container}>
       {comments.map(comment => {
@@ -27,12 +27,7 @@ function Comment({ comments, user, discussionId, handleNewComment }) {
               {comment.author} - {comment.date}
             </span>
             <p css={content}>{comment.comment}</p>
-            <Reply
-              user={user}
-              discussionId={discussionId}
-              handleNewComment={handleNewComment}
-              parentComment={comment.id}
-            />
+            <Reply parentComment={comment.id} />
             <br />
           </div>
         );

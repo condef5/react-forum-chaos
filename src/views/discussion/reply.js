@@ -3,6 +3,9 @@ import React from "react";
 import { jsx } from "@emotion/core";
 
 import { TextArea, Button } from "../../components/ui";
+import UserContext from "../../contexts/user";
+import DiscussionContext from "../../contexts/discussion";
+import NewCommentContext from "../../contexts/newComment";
 
 const button = {
   backgroundColor: "#f60",
@@ -15,7 +18,10 @@ const button = {
 
 const buttonChild = { ...button, width: "10rem" };
 
-function Reply({ user, discussionId, parentComment = null, handleNewComment }) {
+function Reply({ parentComment = null }) {
+  const user = React.useContext(UserContext);
+  const discussionId = React.useContext(DiscussionContext);
+  const handleNewComment = React.useContext(NewCommentContext);
   const [comment, setComment] = React.useState("");
 
   function handleSubmit(event) {
@@ -31,7 +37,7 @@ function Reply({ user, discussionId, parentComment = null, handleNewComment }) {
     setComment("");
   }
 
-  function handlecommentChange(event) {
+  function handleCommentChange(event) {
     setComment(event.target.value);
   }
 
@@ -43,7 +49,7 @@ function Reply({ user, discussionId, parentComment = null, handleNewComment }) {
           aria-label="Reply"
           placeholder="Write Reply"
           type="text"
-          onChange={handlecommentChange}
+          onChange={handleCommentChange}
           value={comment}
         />
         <Button type="submit" styles={parentComment ? buttonChild : button}>

@@ -5,6 +5,9 @@ import { jsx } from "@emotion/core";
 import Header from "./header";
 import Comment from "./comment";
 import Reply from "./reply";
+import { Provider as UserProvider } from "../../contexts/user";
+import { Provider as DiscussionProvider } from "../../contexts/discussion";
+import { Provider as NewCommentProvider } from "../../contexts/newComment";
 
 const initialUser = JSON.parse(
   localStorage.getItem("user") ||
@@ -113,26 +116,25 @@ function Debate({ id }) {
   }, [listComment]);
 
   return (
-    <div css={container}>
-      <Header
-        question={initialDiscussions.find(
-          discussion => discussion.id.toString() === id
-        )}
-      />
-      <Reply
-        user={initialUser}
-        discussionId={id}
-        handleNewComment={handleNewComment}
-      />
-      <Comment
-        user={initialUser}
-        discussionId={id}
-        handleNewComment={handleNewComment}
-        comments={listComment.filter(
-          comment => comment.discussionId.toString() === id
-        )}
-      />
-    </div>
+    <UserProvider value={initialUser}>
+      <DiscussionProvider value={id}>
+        <NewCommentProvider value={handleNewComment}>
+          <div css={container}>
+            <Header
+              question={initialDiscussions.find(
+                discussion => discussion.id.toString() === id
+              )}
+            />
+            <Reply />
+            <Comment
+              comments={listComment.filter(
+                comment => comment.discussionId.toString() === id
+              )}
+            />
+          </div>
+        </NewCommentProvider>
+      </DiscussionProvider>
+    </UserProvider>
   );
 }
 
