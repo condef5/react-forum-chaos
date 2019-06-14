@@ -5,12 +5,11 @@ import { Router, Redirect } from "@reach/router";
 import Home from "./views/home";
 import Debate from "./views/debate";
 import Login from "./views/login";
-import Logout from "./views/logout";
 import Navbar from "./components/navbar";
 
 function App() {
   const [user, setUser] = React.useState(
-    JSON.parse(localStorage.getItem("user"))
+    JSON.parse(localStorage.getItem("user") || "{}")
   );
 
   function createUser(value) {
@@ -30,7 +29,6 @@ function App() {
         <Home path="/" />
         <Debate path="discussion/:id" />
         <Login createUser={createUser} path="login" />
-        <Logout path="logout" />
       </Router>
     </main>
   );

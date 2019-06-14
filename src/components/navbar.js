@@ -4,6 +4,11 @@ import { jsx } from "@emotion/core";
 import { Link } from "@reach/router";
 
 function Navbar({ user }) {
+  function deleteSession() {
+    localStorage.removeItem("user");
+    window.location = "/";
+  }
+
   return (
     <nav>
       <a href="/">
@@ -16,7 +21,9 @@ function Navbar({ user }) {
 
         {user ? (
           <li>
-            <Link to="/logout">Logout</Link>
+            <a href="#" onClick={deleteSession}>
+              Logout
+            </a>
           </li>
         ) : (
           <li>
