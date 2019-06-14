@@ -4,6 +4,22 @@ import { jsx } from "@emotion/core";
 
 import { TextArea, Button } from "../../components/ui";
 
+const container = {
+  display: "flex",
+  flexDirection: "column"
+};
+
+const button = {
+  backgroundColor: "#f60",
+  border: "1px solid #f60",
+  "&:hover": {
+    backgroundColor: "#fff",
+    color: "#f60"
+  }
+};
+
+const buttonChild = { ...button, width: "10rem" };
+
 function Reply({ user, discussionId, parentComment = null, handleNewComment }) {
   const [comment, setComment] = React.useState("");
 
@@ -26,15 +42,18 @@ function Reply({ user, discussionId, parentComment = null, handleNewComment }) {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <input
+      <form css={container} onSubmit={handleSubmit}>
+        <TextArea
+          css={{ height: "100px" }}
           aria-label="Reply"
           placeholder="Write Reply"
           type="text"
           onChange={handlecommentChange}
           value={comment}
         />
-        <Button type="submit">Reply</Button>
+        <Button type="submit" styles={parentComment ? buttonChild : button}>
+          Reply
+        </Button>
       </form>
     </>
   );
