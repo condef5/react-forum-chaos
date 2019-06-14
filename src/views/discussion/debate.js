@@ -88,6 +88,12 @@ const initialComments = JSON.parse(
     ])
 );
 
+const container = {
+  maxWidth: "45rem",
+  margin: "0 auto",
+  backgroundColor: "#fff"
+};
+
 function Debate({ id }) {
   const [listComment, setListComment] = React.useState(initialComments);
 
@@ -100,7 +106,7 @@ function Debate({ id }) {
   }, [listComment]);
 
   return (
-    <>
+    <div css={container}>
       <Header
         question={initialDiscussions.find(
           discussion => discussion.id.toString() === id
@@ -119,7 +125,7 @@ function Debate({ id }) {
           comment => comment.discussionId.toString() === id
         )}
       />
-    </>
+    </div>
   );
 }
 
