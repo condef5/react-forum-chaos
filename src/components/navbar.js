@@ -15,7 +15,7 @@ function Navbar({ user }) {
     transition: "color .15s ease",
     fontWeight: "300",
     letterSpacing: "1px",
-    marginLeft: "1.8em",
+    marginLeft: "16px",
     "&:hover": {
       color: "#fff"
     }
@@ -52,7 +52,7 @@ function Navbar({ user }) {
         >
           <li>
             <Link css={linkStyles} to="/">
-              Home
+              condef5
             </Link>
           </li>
 
