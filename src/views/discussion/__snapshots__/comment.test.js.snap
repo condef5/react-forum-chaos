@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comment component 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  margin: 10px 0;
+}
+
+<div
+    class="emotion-0"
+  />
+</DocumentFragment>
+`;
