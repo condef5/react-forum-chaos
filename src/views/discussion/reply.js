@@ -4,11 +4,6 @@ import { jsx } from "@emotion/core";
 
 import { TextArea, Button } from "../../components/ui";
 
-const container = {
-  display: "flex",
-  flexDirection: "column"
-};
-
 const button = {
   backgroundColor: "#f60",
   border: "1px solid #f60",
@@ -42,7 +37,7 @@ function Reply({ user, discussionId, parentComment = null, handleNewComment }) {
 
   return (
     <>
-      <form css={container} onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <TextArea
           css={{ height: "100px" }}
           aria-label="Reply"

@@ -8,12 +8,10 @@ import Reply from "./reply";
 
 const initialUser = JSON.parse(
   localStorage.getItem("user") ||
-    JSON.stringify([
-      {
-        email: "paulotijero@gmail.com",
-        username: "Paulo Tijero"
-      }
-    ])
+    JSON.stringify({
+      email: "paulotijero@gmail.com",
+      username: "Paulo Tijero"
+    })
 );
 
 const initialDiscussions = JSON.parse(
@@ -84,6 +82,15 @@ const initialComments = JSON.parse(
         date: "12-02-19",
         parentComment: 1,
         discussionId: 2
+      },
+      {
+        id: 5,
+        comment:
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit nostra tempor eleifend.",
+        author: "Lian",
+        date: "12-02-19",
+        parentComment: 3,
+        discussionId: 1
       }
     ])
 );
