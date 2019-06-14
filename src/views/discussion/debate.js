@@ -80,7 +80,6 @@ const messages = [
 function Debate({ id }) {
   return (
     <>
-      <div>Discussion {id}</div>
       <Header
         question={discussions.find(
           discussion => discussion.id.toString() === id

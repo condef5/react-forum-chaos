@@ -2,6 +2,8 @@
 import React from "react";
 import { jsx } from "@emotion/core";
 
+import { Button } from "../../components/ui";
+
 function Messages({ messages }) {
   return (
     <>
@@ -11,6 +13,8 @@ function Messages({ messages }) {
             <span>{message.author}</span>
             <span>{message.date}</span>
             <p>{message.comment}</p>
+            <Button styles={{ width: "200px" }}>Reply</Button>
+            <br />
           </>
         );
       })}
