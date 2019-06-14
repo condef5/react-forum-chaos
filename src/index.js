@@ -1,22 +1,17 @@
 // src/index.js
 import React from "react";
 import { render } from "react-dom";
-import { Router, Link } from "@reach/router";
+import { Router, Redirect } from "@reach/router";
 import Home from "./views/home";
 import Debate from "./views/debate";
 import Login from "./views/login";
 import Logout from "./views/logout";
 import Navbar from "./components/navbar";
-import { navigate } from "@reach/router";
 
 function App() {
   const [user, setUser] = React.useState(
     JSON.parse(localStorage.getItem("user"))
   );
-
-  if (!user) {
-    navigate("/login");
-  }
 
   function createUser(value) {
     localStorage.setItem("user", JSON.stringify(value));
@@ -25,8 +20,13 @@ function App() {
 
   return (
     <main>
-      <Navbar user={user} />
+      <Navbar user={user} setUser={createUser} />
       <Router>
+        {user ? (
+          <Redirect from="/login" to="/" />
+        ) : (
+          <Redirect from="/" to="/login" />
+        )}
         <Home path="/" />
         <Debate path="discussion/:id" />
         <Login createUser={createUser} path="login" />

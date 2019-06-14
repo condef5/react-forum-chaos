@@ -2,16 +2,11 @@
 import React from "react";
 import { jsx } from "@emotion/core";
 import { Link } from "@reach/router";
-import { navigate } from "@reach/router";
-import { create } from "istanbul-reports";
 
 function Login({ createUser }) {
   const [username, setUsername] = React.useState("");
   const [email, setEmail] = React.useState("");
   const user = JSON.parse(localStorage.getItem("user"));
-  if (user) {
-    navigate("/");
-  }
 
   function handleChangeUsername(event) {
     setUsername(event.target.value);
@@ -25,7 +20,6 @@ function Login({ createUser }) {
 
     const user = { email: email, username: username };
     createUser(user);
-    navigate("/");
   }
 
   return (
