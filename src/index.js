@@ -1,11 +1,25 @@
-// src/index.js
+/** @jsx jsx */
 import React from "react";
 import { render } from "react-dom";
 import { Router, Redirect } from "@reach/router";
+import { jsx, Global } from "@emotion/core";
 import Home from "./views/home";
 import Debate from "./views/debate";
 import Login from "./views/login";
 import Navbar from "./components/navbar";
+
+const globalStyles = {
+  body: {
+    margin: 0,
+    fontFamily: "Roboto, sans-serif",
+    background: "#f2f3f5",
+    color: "#34495e",
+    fontSize: "15px"
+  },
+  a: {
+    color: "#34495e"
+  }
+};
 
 function App() {
   const [user, setUser] = React.useState(
@@ -18,19 +32,27 @@ function App() {
   }
 
   return (
-    <main>
+    <>
+      <Global styles={globalStyles} />
       <Navbar user={user} setUser={createUser} />
-      <Router>
-        {user.username ? (
-          <Redirect from="/login" to="/" noThrow />
-        ) : (
-          <Redirect from="/" to="/login" noThrow />
-        )}
-        <Home path="/" />
-        <Debate path="discussion/:id" />
-        <Login createUser={createUser} path="login" />
-      </Router>
-    </main>
+      <main
+        css={{
+          maxWidth: "900px",
+          margin: "0 auto"
+        }}
+      >
+        <Router>
+          {user.username ? (
+            <Redirect from="/login" to="/" noThrow />
+          ) : (
+            <Redirect from="/" to="/login" noThrow />
+          )}
+          <Home path="/" />
+          <Debate path="discussion/:id" />
+          <Login createUser={createUser} path="login" />
+        </Router>
+      </main>
+    </>
   );
 }
 

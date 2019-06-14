@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react";
 import { jsx } from "@emotion/core";
 import { Link } from "@reach/router";
 
@@ -9,28 +8,69 @@ function Navbar({ user }) {
     window.location = "/";
   }
 
-  return (
-    <nav>
-      <a href="/">
-        <span>Logo</span>
-      </a>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
+  const linkStyles = {
+    textDecoration: "none",
+    color: "rgba(255, 255, 255, 0.8)",
+    lineHeight: "24px",
+    transition: "color .15s ease",
+    fontWeight: "300",
+    letterSpacing: "1px",
+    marginLeft: "1.8em",
+    "&:hover": {
+      color: "#fff"
+    }
+  };
 
-        {user.username ? (
+  return (
+    <nav
+      css={{
+        background: "#f60",
+        padding: "15px 5px",
+        marginBottom: "2em"
+      }}
+    >
+      <div
+        css={{
+          color: "#fff",
+          alignitems: "center",
+          display: "flex",
+          maxWidth: "900px",
+          margin: "auto",
+          alignItems: "center",
+          justifyContent: "space-between"
+        }}
+      >
+        <Link to="/" css={{ ...linkStyles, margin: 0 }}>
+          <span>Chaos News</span>
+        </Link>
+        <ul
+          css={{
+            listStyle: "none",
+            display: "flex",
+            margin: 0
+          }}
+        >
           <li>
-            <a href="#" onClick={deleteSession}>
-              Logout
-            </a>
+            <Link css={linkStyles} to="/">
+              Home
+            </Link>
           </li>
-        ) : (
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
-        )}
-      </ul>
+
+          {user.username ? (
+            <li>
+              <a href="#" css={linkStyles} onClick={deleteSession}>
+                Logout
+              </a>
+            </li>
+          ) : (
+            <li>
+              <Link css={linkStyles} to="/login">
+                Login
+              </Link>
+            </li>
+          )}
+        </ul>
+      </div>
     </nav>
   );
 }
