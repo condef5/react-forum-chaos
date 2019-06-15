@@ -9,14 +9,14 @@ function CreateDiscussion({ handleCloseModal, handleCreateDisccusion }) {
 
   function handleSubmit(event) {
     event.preventDefault();
+    handleCloseModal();
     handleCreateDisccusion({
-      id: new Date().getTime(),
+      id: new Date(Date.now()).getTime(),
       title,
       body,
       author: "condef5",
-      date: new Date().toISOString()
+      date: new Date(Date.now()).toISOString()
     });
-    handleCloseModal();
   }
 
   function handleTitleChange(event) {
@@ -44,7 +44,7 @@ function CreateDiscussion({ handleCloseModal, handleCreateDisccusion }) {
         }}
       >
         <Input
-          aria-label="Write the title discussion"
+          aria-label="Write the title of the discussion"
           placeholder="Discussion title"
           type="text"
           name="title"
@@ -60,7 +60,7 @@ function CreateDiscussion({ handleCloseModal, handleCreateDisccusion }) {
         }}
       >
         <TextArea
-          aria-label="Write the body discussion"
+          aria-label="Write the body of the discussion"
           placeholder="Body title"
           name="body"
           required
