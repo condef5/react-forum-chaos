@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component 1`] = `
+<DocumentFragment>
+  .emotion-3 {
+  margin: 5px;
+  border-bottom: 2px dashed #34495e;
+}
+
+.emotion-0 {
+  font-size: 3em;
+  margin: 10px 0;
+}
+
+.emotion-1 {
+  font-size: 1em;
+  color: #34495e;
+}
+
+.emotion-2 {
+  font-size: 1.3em;
+  color: #34495e;
+}
+
+<div
+    class="emotion-3"
+  >
+    <h1
+      class="emotion-0"
+    />
+    <span
+      class="emotion-1"
+    >
+       - 
+    </span>
+    <p
+      class="emotion-2"
+    />
+  </div>
+</DocumentFragment>
+`;

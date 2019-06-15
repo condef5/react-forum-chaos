@@ -9,10 +9,11 @@ const styleInput = {
   display: "block",
   fontSize: "1rem",
   padding: ".5rem",
+  color: "#34495e",
   width: "100%",
   "&:focus": {
     outline: "none",
-    borderColor: "#444444"
+    borderColor: "rgba(255, 102, 0, 0.5)"
   }
 };
 
@@ -21,8 +22,8 @@ function Button({ styles, ...props }) {
     <button
       {...props}
       css={{
-        backgroundColor: "black",
-        border: "1px solid black",
+        backgroundColor: "#f60",
+        border: "1px solid #f60",
         borderRadius: ".25rem",
         color: "white",
         cursor: "pointer",
@@ -34,7 +35,7 @@ function Button({ styles, ...props }) {
         width: "100%",
         "&:hover": {
           backgroundColor: "white",
-          color: "black"
+          color: "#f60"
         },
         ...styles
       }}
@@ -72,7 +73,7 @@ function Input({ styles, ...props }) {
 }
 
 function TextArea({ styles, ...props }) {
-  return <texarea {...props} css={{ ...styleInput, ...styles }} />;
+  return <textarea {...props} css={{ ...styleInput, ...styles }} />;
 }
 
 export { Button, Card, Input, TextArea };
