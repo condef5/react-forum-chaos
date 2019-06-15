@@ -22,7 +22,7 @@ const initialDiscussions = JSON.parse(
     JSON.stringify([
       {
         id: 1,
-        title: "How to kill Paulo",
+        title: "How to use React",
         body:
           "Lorem ipsum dolor sit amet consectetur adipiscing elit nostra tempor eleifend, vulputate ultrices natoque dictumst massa molestie hendrerit phasellus blandit, est justo non lobortis potenti primis laoreet sodales varius. Nascetur posuere imperdiet hendrerit per ridiculus enim suspendisse viverra tristique cras eget tortor sapien, volutpat montes mollis blandit.",
         author: "Paulo Tijero",
@@ -30,7 +30,7 @@ const initialDiscussions = JSON.parse(
       },
       {
         id: 2,
-        title: "How to kill Lian",
+        title: "How to use React",
         body:
           "Lorem ipsum dolor sit amet consectetur adipiscing elit nostra tempor eleifend, vulputate ultrices natoque dictumst massa molestie hendrerit phasellus blandit, est justo non lobortis potenti primis laoreet sodales varius. Nascetur posuere imperdiet hendrerit per ridiculus enim suspendisse viverra tristique cras eget tortor sapien, volutpat montes mollis blandit.",
         author: "Lian",
@@ -38,7 +38,7 @@ const initialDiscussions = JSON.parse(
       },
       {
         id: 3,
-        title: "How to kill Frank",
+        title: "How to use React",
         body:
           "Lorem ipsum dolor sit amet consectetur adipiscing elit nostra tempor eleifend, vulputate ultrices natoque dictumst massa molestie hendrerit phasellus blandit, est justo non lobortis potenti primis laoreet sodales varius. Nascetur posuere imperdiet hendrerit per ridiculus enim suspendisse viverra tristique cras eget tortor sapien, volutpat montes mollis blandit.",
         author: "Frank",
