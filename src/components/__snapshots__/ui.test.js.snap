@@ -25,7 +25,7 @@ exports[`Button 1`] = `
 <button
     class="emotion-0"
   >
-    This is content
+    This is a button
   </button>
 </DocumentFragment>
 `;
@@ -44,7 +44,7 @@ exports[`Card 1`] = `
 <div
     class="emotion-0"
   >
-    This is content
+    This is card
   </div>
 </DocumentFragment>
 `;

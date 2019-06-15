@@ -3,11 +3,13 @@ import React from "react";
 import { render } from "react-dom";
 import { Router, Redirect } from "@reach/router";
 import { jsx, Global } from "@emotion/core";
-import Home from "./views/home";
-import Debate from "./views/debate";
-import Login from "./views/login";
-import Navbar from "./components/navbar";
 import { DiscussionProvider } from "./contexts/discussions";
+import Spinner from "./components/spinner";
+import Navbar from "./components/navbar";
+
+const Home = React.lazy(() => import("./views/home"));
+const Debate = React.lazy(() => import("./views/debate"));
+const Login = React.lazy(() => import("./views/login"));
 
 const globalStyles = {
   body: {
@@ -84,16 +86,18 @@ function App() {
           margin: "0 auto"
         }}
       >
-        <Router>
-          {user.username ? (
-            <Redirect from="/login" to="/" noThrow />
-          ) : (
-            <Redirect from="/" to="/login" noThrow />
-          )}
-          <Home path="/" />
-          <Debate path="discussion/:id" />
-          <Login createUser={createUser} path="login" />
-        </Router>
+        <React.Suspense fallback={<Spinner />}>
+          <Router>
+            {user.username ? (
+              <Redirect from="/login" to="/" noThrow />
+            ) : (
+              <Redirect from="/" to="/login" noThrow />
+            )}
+            <Home path="/" />
+            <Debate path="discussion/:id" />
+            <Login createUser={createUser} path="login" />
+          </Router>
+        </React.Suspense>
       </main>
     </DiscussionProvider>
   );
