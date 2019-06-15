@@ -19,7 +19,7 @@ function Navbar({ user }) {
           <Link to="/">Home</Link>
         </li>
 
-        {user ? (
+        {user.username ? (
           <li>
             <a href="#" onClick={deleteSession}>
               Logout

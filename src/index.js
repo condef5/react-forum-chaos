@@ -21,10 +21,10 @@ function App() {
     <main>
       <Navbar user={user} setUser={createUser} />
       <Router>
-        {user ? (
-          <Redirect from="/login" to="/" />
+        {user.username ? (
+          <Redirect from="/login" to="/" noThrow />
         ) : (
-          <Redirect from="/" to="/login" />
+          <Redirect from="/" to="/login" noThrow />
         )}
         <Home path="/" />
         <Debate path="discussion/:id" />

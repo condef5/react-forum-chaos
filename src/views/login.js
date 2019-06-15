@@ -6,7 +6,6 @@ import { Link } from "@reach/router";
 function Login({ createUser }) {
   const [username, setUsername] = React.useState("");
   const [email, setEmail] = React.useState("");
-  const user = JSON.parse(localStorage.getItem("user"));
 
   function handleChangeUsername(event) {
     setUsername(event.target.value);
