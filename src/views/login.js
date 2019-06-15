@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import React from "react";
 import { jsx } from "@emotion/core";
-import { Link } from "@reach/router";
 import { Button, Card, Input, TextArea } from "../components/ui";
 
 function Login({ createUser }) {
@@ -24,7 +23,6 @@ function Login({ createUser }) {
 
   return (
     <>
-      <Link to="/">Go to Home</Link>
       <Card
         css={{
           backgroundColor: "white",
