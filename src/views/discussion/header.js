@@ -19,14 +19,14 @@ const info = {
 
 const content = { ...info, fontSize: "1.3em" };
 
-function Header({ question }) {
+function Header({ discussion }) {
   return (
     <div css={container}>
-      <h1 css={title}>{question.title}</h1>
+      <h1 css={title}>{discussion.title}</h1>
       <span css={info}>
-        {question.author} - {question.date}
+        {discussion.author} - {discussion.date}
       </span>
-      <p css={content}>{question.body}</p>
+      <p css={content}>{discussion.body}</p>
     </div>
   );
 }

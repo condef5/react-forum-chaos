@@ -121,7 +121,7 @@ function Debate({ id }) {
         <NewCommentProvider value={handleNewComment}>
           <div css={container}>
             <Header
-              question={initialDiscussions.find(
+              discussion={initialDiscussions.find(
                 discussion => discussion.id.toString() === id
               )}
             />
