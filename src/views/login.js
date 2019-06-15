@@ -2,6 +2,7 @@
 import React from "react";
 import { jsx } from "@emotion/core";
 import { Link } from "@reach/router";
+import { Button, Card, Input, TextArea } from "../components/ui";
 
 function Login({ createUser }) {
   const [username, setUsername] = React.useState("");
@@ -24,7 +25,7 @@ function Login({ createUser }) {
   return (
     <>
       <Link to="/">Go to Home</Link>
-      <main
+      <Card
         css={{
           background: "gray",
           display: "flex",
@@ -74,7 +75,7 @@ function Login({ createUser }) {
           </div>
 
           <div css={{ margin: "2.5rem 1rem" }}>
-            <input
+            <Input
               css={{
                 border: "none",
                 borderBottom: "1px solid #ccc",
@@ -99,7 +100,7 @@ function Login({ createUser }) {
             />
           </div>
 
-          <button
+          <Button
             css={{
               backgroundColor: "#55E6C1",
               borderRadius: ".5rem",
@@ -115,9 +116,9 @@ function Login({ createUser }) {
             type="submit"
           >
             Enter
-          </button>
+          </Button>
         </form>
-      </main>
+      </Card>
     </>
   );
 }
