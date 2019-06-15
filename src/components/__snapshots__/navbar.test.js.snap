@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component 1`] = `
+<DocumentFragment>
+  <nav>
+    <a
+      href="/"
+    >
+      <span>
+        Logo
+      </span>
+    </a>
+    <ul>
+      <li>
+        <a
+          aria-current="page"
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+        >
+          Logout
+        </a>
+      </li>
+    </ul>
+  </nav>
+</DocumentFragment>
+`;
