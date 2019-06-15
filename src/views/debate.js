@@ -2,12 +2,12 @@
 import React from "react";
 import { jsx } from "@emotion/core";
 
-import Header from "./header";
-import Comments from "./comment";
-import Reply from "./reply";
-import { Provider as UserProvider } from "../../contexts/user";
-import { Provider as DiscussionProvider } from "../../contexts/discussion";
-import { Provider as NewCommentProvider } from "../../contexts/newComment";
+import Header from "../components/discussion/header";
+import Comments from "../components/discussion/comment";
+import Reply from "../components/discussion/reply";
+import { Provider as UserProvider } from "../contexts/user";
+import { Provider as DiscussionProvider } from "../contexts/discussion";
+import { Provider as NewCommentProvider } from "../contexts/newComment";
 
 const initialUser = JSON.parse(
   localStorage.getItem("user") ||

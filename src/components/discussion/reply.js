@@ -2,7 +2,7 @@
 import React from "react";
 import { jsx } from "@emotion/core";
 
-import { TextArea, Button } from "../../components/ui";
+import { TextArea, Button } from "../ui";
 import UserContext from "../../contexts/user";
 import DiscussionContext from "../../contexts/discussion";
 import NewCommentContext from "../../contexts/newComment";

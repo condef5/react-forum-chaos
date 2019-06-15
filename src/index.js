@@ -3,7 +3,7 @@ import React from "react";
 import { render } from "react-dom";
 import { Router, Redirect } from "@reach/router";
 import Home from "./views/home";
-import Debate from "./views/discussion/debate";
+import Debate from "./views/debate";
 import Login from "./views/login";
 import Navbar from "./components/navbar";
 
