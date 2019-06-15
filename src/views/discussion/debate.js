@@ -48,7 +48,7 @@ const initialDiscussions = JSON.parse(
 );
 
 const initialComments = JSON.parse(
-  localStorage.getItem("comments") ||
+  localStorage.getItem("comment") ||
     JSON.stringify([
       {
         id: 1,
