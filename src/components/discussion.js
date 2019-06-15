@@ -15,7 +15,9 @@ function Discussion({ discussion }) {
         }
       }}
     >
-      <Link to={discussion.id.toString()}>{discussion.title}</Link>
+      <Link to={`/discussion/${discussion.id.toString()}`}>
+        {discussion.title}
+      </Link>
       <div css={{ color: "#999", fontSize: ".85em" }}>
         <span>by {discussion.author} </span>
         <span>{new Date(discussion.date).toLocaleDateString()}</span>

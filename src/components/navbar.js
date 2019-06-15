@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import React from "react";
 import { jsx } from "@emotion/core";
 import { Link } from "@reach/router";
 
@@ -50,18 +51,19 @@ function Navbar({ user }) {
             margin: 0
           }}
         >
-          <li>
-            <Link css={linkStyles} to="/">
-              condef5
-            </Link>
-          </li>
-
           {user.username ? (
-            <li>
-              <a href="#" css={linkStyles} onClick={deleteSession}>
-                Logout
-              </a>
-            </li>
+            <>
+              <li>
+                <Link css={linkStyles} to="/">
+                  {user.username}
+                </Link>
+              </li>
+              <li>
+                <a href="#" css={linkStyles} onClick={deleteSession}>
+                  Logout
+                </a>
+              </li>
+            </>
           ) : (
             <li>
               <Link css={linkStyles} to="/login">

@@ -92,7 +92,7 @@ function App() {
               <Redirect from="/login" to="/" noThrow />
             ) : (
               <Redirect from="/" to="/login" noThrow />
-            )}
+            )}  
             <Home path="/" />
             <Debate path="discussion/:id" />
             <Login createUser={createUser} path="login" />
