@@ -92,7 +92,7 @@ const initialComments = JSON.parse(
           "Lorem ipsum dolor sit amet consectetur adipiscing elit nostra tempor eleifend.",
         author: "Lian",
         date: "12-02-19",
-        parentComment: 3,
+        parentComment: 2,
         discussionId: 1
       }
     ])

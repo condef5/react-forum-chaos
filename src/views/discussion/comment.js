@@ -22,8 +22,8 @@ function Comment({ comments, listReplies }) {
     <div css={container}>
       {comments.map(comment => {
         return (
-          <>
-            <div>
+          <React.Fragment key={comment.id}>
+            <div role="comment">
               <span css={info}>
                 {comment.author} - {comment.date}
               </span>
@@ -39,7 +39,7 @@ function Comment({ comments, listReplies }) {
                   .filter(replays => replays.parentComment === comment.id)
                   .map(replay => {
                     return (
-                      <div css={containerChild}>
+                      <div key={replay.id} css={containerChild} role="replay">
                         <span css={info}>
                           {replay.author} - {replay.date}
                         </span>
@@ -50,7 +50,7 @@ function Comment({ comments, listReplies }) {
                   })}
               </div>
             )}
-          </>
+          </React.Fragment>
         );
       })}
     </div>
