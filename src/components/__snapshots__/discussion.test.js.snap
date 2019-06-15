@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Discussion component 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 20px 15px;
+  line-height: 20px;
+}
+
+.emotion-1 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0 {
+  color: #999;
+  font-size: .85em;
+}
+
+<li
+    class="emotion-1"
+  >
+    <a
+      href="/1560462618315"
+    >
+      How kill to Christopher
+    </a>
+    <div
+      class="emotion-0"
+    >
+      <span>
+        by condef5 
+      </span>
+      <span>
+        6/13/2019
+      </span>
+      <span>
+        | 1 comments
+      </span>
+    </div>
+  </li>
+</DocumentFragment>
+`;
+
+exports[`DiscussionList component 1`] = `
+<DocumentFragment>
+  .emotion-4 {
+  list-style: none;
+  padding: 0;
+  margin: 2em 0;
+}
+
+.emotion-1 {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 20px 15px;
+  line-height: 20px;
+}
+
+.emotion-1 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0 {
+  color: #999;
+  font-size: .85em;
+}
+
+<ul
+    class="emotion-4"
+  >
+    <li
+      class="emotion-1"
+    >
+      <a
+        href="/1560466218315"
+      >
+        How to build the future today
+      </a>
+      <div
+        class="emotion-0"
+      >
+        <span>
+          by condef5 
+        </span>
+        <span>
+          6/13/2019
+        </span>
+        <span>
+          | 1 comments
+        </span>
+      </div>
+    </li>
+    <li
+      class="emotion-1"
+    >
+      <a
+        href="/1560462618315"
+      >
+        How kill to Christopher
+      </a>
+      <div
+        class="emotion-0"
+      >
+        <span>
+          by condef5 
+        </span>
+        <span>
+          6/13/2019
+        </span>
+        <span>
+          | 1 comments
+        </span>
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
