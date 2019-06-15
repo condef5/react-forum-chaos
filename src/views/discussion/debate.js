@@ -3,7 +3,7 @@ import React from "react";
 import { jsx } from "@emotion/core";
 
 import Header from "./header";
-import Comment from "./comment";
+import Comments from "./comment";
 import Reply from "./reply";
 import { Provider as UserProvider } from "../../contexts/user";
 import { Provider as DiscussionProvider } from "../../contexts/discussion";
@@ -126,9 +126,16 @@ function Debate({ id }) {
               )}
             />
             <Reply />
-            <Comment
+            <Comments
+              listReplies={listComment.filter(
+                comment =>
+                  comment.discussionId.toString() === id &&
+                  comment.parentComment
+              )}
               comments={listComment.filter(
-                comment => comment.discussionId.toString() === id
+                comment =>
+                  comment.discussionId.toString() === id &&
+                  !comment.parentComment
               )}
             />
           </div>
