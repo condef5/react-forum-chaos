@@ -10,6 +10,7 @@ import NewCommentContext from "../../contexts/newComment";
 const button = {
   backgroundColor: "#f60",
   border: "1px solid #f60",
+  marginTop: "1em",
   "&:hover": {
     backgroundColor: "#fff",
     color: "#f60"

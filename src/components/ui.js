@@ -13,7 +13,7 @@ const styleInput = {
   width: "100%",
   "&:focus": {
     outline: "none",
-    borderColor: "#34495e"
+    borderColor: "rgba(255, 102, 0, 0.5)"
   }
 };
 
