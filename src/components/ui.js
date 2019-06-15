@@ -72,7 +72,7 @@ function Input({ styles, ...props }) {
 }
 
 function TextArea({ styles, ...props }) {
-  return <texarea {...props} css={{ ...styleInput, ...styles }} />;
+  return <textarea {...props} css={{ ...styleInput, ...styles }} />;
 }
 
 export { Button, Card, Input, TextArea };

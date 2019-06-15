@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reply component 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  background: none;
+  border: 1px solid #eaeaea;
+  border-radius: .25rem;
+  box-sizing: border-box;
+  display: block;
+  font-size: 1rem;
+  padding: .5rem;
+  width: 100%;
+  height: 100px;
+}
+
+.emotion-0:focus {
+  outline: none;
+  border-color: #444444;
+}
+
+.emotion-1 {
+  background-color: #f60;
+  border: 1px solid #f60;
+  border-radius: .25rem;
+  color: white;
+  cursor: pointer;
+  font-size: .8rem;
+  padding: .75rem 0;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  text-align: center;
+  text-transform: uppercase;
+  width: 10rem;
+}
+
+.emotion-1:hover {
+  background-color: #fff;
+  color: #f60;
+}
+
+<form>
+    <textarea
+      aria-label="Reply"
+      class="emotion-0"
+      placeholder="Write Reply"
+      type="text"
+    />
+    <button
+      class="emotion-1"
+      type="submit"
+    >
+      Reply
+    </button>
+  </form>
+</DocumentFragment>
+`;
