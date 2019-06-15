@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  background-color: #f60;
+  border: 1px solid #f60;
+  border-radius: .25rem;
+  color: white;
+  cursor: pointer;
+  font-size: .8rem;
+  padding: .75rem 0;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.emotion-0:hover {
+  background-color: white;
+  color: #f60;
+}
+
+<button
+    class="emotion-0"
+  >
+    This is a button
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Card 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  background: white;
+  border-radius: .5em;
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,.12);
+  box-sizing: border-box;
+  padding: 2rem;
+  width: 100%;
+}
+
+<div
+    class="emotion-0"
+  >
+    This is card
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Input 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  background: none;
+  border: 1px solid #eaeaea;
+  border-radius: .25rem;
+  box-sizing: border-box;
+  display: block;
+  font-size: 1rem;
+  padding: .5rem;
+  color: #34495e;
+  width: 100%;
+}
+
+.emotion-0:focus {
+  outline: none;
+  border-color: #34495e;
+}
+
+<input
+    class="emotion-0"
+  />
+</DocumentFragment>
+`;
+
+exports[`TextArea 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  background: none;
+  border: 1px solid #eaeaea;
+  border-radius: .25rem;
+  box-sizing: border-box;
+  display: block;
+  font-size: 1rem;
+  padding: .5rem;
+  color: #34495e;
+  width: 100%;
+}
+
+.emotion-0:focus {
+  outline: none;
+  border-color: #34495e;
+}
+
+<textarea
+    class="emotion-0"
+  />
+</DocumentFragment>
+`;
