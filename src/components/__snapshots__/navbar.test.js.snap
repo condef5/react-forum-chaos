@@ -2,31 +2,116 @@
 
 exports[`Navbar component 1`] = `
 <DocumentFragment>
-  <nav>
-    <a
-      href="/"
+  .emotion-5 {
+  background: #f60;
+  padding: 15px 5px;
+  margin-bottom: 2em;
+}
+
+.emotion-4 {
+  color: #fff;
+  alignitems: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 900px;
+  margin: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-0 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: rgba(255,255,255,0.8);
+  line-height: 24px;
+  -webkit-transition: color .15s ease;
+  transition: color .15s ease;
+  font-weight: 300;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  margin-left: 16px;
+  margin: 0;
+}
+
+.emotion-0:hover {
+  color: #fff;
+}
+
+.emotion-3 {
+  list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+.emotion-1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: rgba(255,255,255,0.8);
+  line-height: 24px;
+  -webkit-transition: color .15s ease;
+  transition: color .15s ease;
+  font-weight: 300;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  margin-left: 16px;
+}
+
+.emotion-1:hover {
+  color: #fff;
+}
+
+<nav
+    class="emotion-5"
+  >
+    <div
+      class="emotion-4"
     >
-      <span>
-        Logo
-      </span>
-    </a>
-    <ul>
-      <li>
-        <a
-          aria-current="page"
-          href="/"
-        >
-          Home
-        </a>
-      </li>
-      <li>
-        <a
-          href="#"
-        >
-          Logout
-        </a>
-      </li>
-    </ul>
+      <a
+        aria-current="page"
+        class="emotion-0"
+        href="/"
+      >
+        <span>
+          Chaos News
+        </span>
+      </a>
+      <ul
+        class="emotion-3"
+      >
+        <li>
+          <a
+            aria-current="page"
+            class="emotion-1"
+            href="/"
+          >
+            lian
+          </a>
+        </li>
+        <li>
+          <a
+            class="emotion-1"
+            href="#"
+          >
+            Logout
+          </a>
+        </li>
+      </ul>
+    </div>
   </nav>
 </DocumentFragment>
 `;

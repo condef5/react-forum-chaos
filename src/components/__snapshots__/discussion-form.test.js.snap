@@ -26,7 +26,7 @@ exports[`Home component 1`] = `
 
 .emotion-1:focus {
   outline: none;
-  border-color: #34495e;
+  border-color: rgba(255,102,0,0.5);
 }
 
 .emotion-3 {
@@ -43,7 +43,7 @@ exports[`Home component 1`] = `
 
 .emotion-3:focus {
   outline: none;
-  border-color: #34495e;
+  border-color: rgba(255,102,0,0.5);
 }
 
 .emotion-5 {

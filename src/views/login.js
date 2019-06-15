@@ -22,7 +22,12 @@ function Login({ createUser }) {
   }
 
   return (
-    <>
+    <div
+      css={{
+        height: "calc(100vh - 54px - 2em)",
+        display: "flex"
+      }}
+    >
       <Card
         css={{
           backgroundColor: "white",
@@ -66,7 +71,7 @@ function Login({ createUser }) {
           <Button type="submit">Enter</Button>
         </form>
       </Card>
-    </>
+    </div>
   );
 }
 

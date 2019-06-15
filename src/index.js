@@ -35,25 +35,25 @@ const initialDiscussion = JSON.parse(
         date: "2019-06-13T21:50:18.315Z"
       },
       {
-        id: new Date("2019-06-13T22:50:18.315Z").getTime(),
+        id: new Date("2019-06-13T20:50:18.315Z").getTime(),
         title: "How to build the future today",
         body: "Some body in the sky",
         author: "condef5",
-        date: "2019-06-13T22:50:18.315Z"
+        date: "2019-06-13T20:50:18.315Z"
       },
       {
-        id: new Date("2019-06-13T23:50:18.315Z").getTime(),
+        id: new Date("2019-05-13T23:50:18.315Z").getTime(),
         title: "Learn react like a professional",
         body: "Some body in the sky",
         author: "condef5",
-        date: "2019-06-13T23:50:18.315Z"
+        date: "2019-05-13T23:50:18.315Z"
       },
       {
-        id: new Date("2019-06-13T13:50:18.315Z").getTime(),
+        id: new Date("2019-04-13T13:50:18.315Z").getTime(),
         title: "The best reply in the history",
         body: "Some body in the sky",
         author: "condef5",
-        date: "2019-06-13T13:50:18.315Z"
+        date: "2019-04-13T13:50:18.315Z"
       }
     ])
 );
@@ -92,9 +92,13 @@ function App() {
               <Redirect from="/login" to="/" noThrow />
             ) : (
               <Redirect from="/" to="/login" noThrow />
-            )}  
+            )}
             <Home path="/" />
-            <Debate path="discussion/:id" />
+            <Debate
+              path="discussion/:id"
+              discussions={discussions}
+              user={user}
+            />
             <Login createUser={createUser} path="login" />
           </Router>
         </React.Suspense>
