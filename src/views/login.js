@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from "react";
 import { jsx } from "@emotion/core";
-import { Button, Card, Input, TextArea } from "../components/ui";
+import { Button, Card, Input } from "../components/ui";
 
 function Login({ createUser }) {
   const [username, setUsername] = React.useState("");
