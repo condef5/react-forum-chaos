@@ -2,7 +2,7 @@ import React from "react";
 import { render, fireEvent, waitForElement } from "@testing-library/react";
 import DiscussionForm from "./discussion-form";
 
-test("Home component", async () => {
+test("DiscussionForm component", async () => {
   Date.now = jest.fn(() => new Date("2019-06-13T22:50:18.315Z"));
   const handleCreateDisccusion = jest.fn();
 
