@@ -77,9 +77,11 @@ function Debate({ id, discussions, user }) {
     localStorage.setItem("comment", JSON.stringify(listComment));
   }, [listComment]);
 
-  if (!user.username) {
-    redirectTo("/login");
-  }
+  React.useEffect(() => {
+    if (!user.username) redirectTo("/login");
+  }, [user.username]);
+
+  if (!user.username) return null;
 
   return (
     <UserProvider value={user}>
