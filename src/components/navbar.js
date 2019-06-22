@@ -26,7 +26,7 @@ function Navbar({ user }) {
     <nav
       css={{
         background: "#f60",
-        padding: "15px 5px",
+        padding: "15px",
         marginBottom: "2em"
       }}
     >
